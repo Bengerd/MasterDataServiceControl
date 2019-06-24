@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77F1BD5E-BCF4-4B9A-8477-D8124434998C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterDataServiceControl</RootNamespace>
+    <AssemblyName>MasterDataServiceControl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\MasterDataServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData.cs" />
+    <Compile Include="MetaData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceReferencesSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.AnnotationsCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.AnnotationsDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.AnnotationsUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.AttributeChangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.BusinessRulesCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.BusinessRulesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.BusinessRulesPaletteGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityInstalledStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityKnowledgeBasesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityOperationCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityOperationPurgeOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityOperationResultsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityOperationStartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityOperationStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.DataQualityStoreInputDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberAnnotationDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberAnnotationSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberAnnotationsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberAttributesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberChangesetDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberChangesetSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberChangesetsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberHistoryRollbackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMemberKeyGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersMergeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersPurgeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityMembersUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityStagingClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityStagingGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityStagingLoadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.EntityStagingProcessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ErrorLogsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ExportViewCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ExportViewDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ExportViewListGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ExportViewUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.FileGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.FileSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.HierarchyMembersGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.HierarchyParentSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MetadataCloneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MetadataCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MetadataDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MetadataGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.MetadataUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ModelMembersGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SecurityCreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SecurityPrincipalsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SecurityPrivilegesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ServiceVersionGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.StagingNameCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SyncRelationshipDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SyncRelationshipMergeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SyncRelationshipRefreshResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SyncRelationshipsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SystemDomainListGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SystemPropertiesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SystemSettingsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.SystemSettingsUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.TransactionAnnotationsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.TransactionsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.TransactionsReverseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.UserEffectiveObjectPermissionsGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.UserPreferencesDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.UserPreferencesGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.UserPreferencesUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ValidationGetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.ValidationProcessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\MasterDataServiceControl.MasterDataServices.VersionCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MasterDataServices\Service.wsdl" />
+    <None Include="Connected Services\MasterDataServices\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MasterDataServices\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MasterDataServices\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MasterDataServices\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MasterDataServices\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MasterDataServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MasterDataServices\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MasterDataServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MasterDataServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MasterDataServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
